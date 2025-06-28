@@ -477,7 +477,8 @@ public final class MinecraftEventListeners {
                     placeholder -> Utils.getPlaceholderHandler(placeholder, placeholders)
             );
 
-            discord.sendEmbedMessageUsingPlayerAvatar(player, Color.green, msg.getString(), desc.getString());
+            // discord.sendEmbedMessageUsingPlayerAvatar(player, Color.green, msg.getString(), desc.getString());
+            discord.sendPlainMessage(msg.getString());
         });
 
         PlayerDisconnectedCallback.EVENT.register((player, server, fromVanish) -> {
@@ -509,7 +510,8 @@ public final class MinecraftEventListeners {
                     placeholder -> Utils.getPlaceholderHandler(placeholder, placeholders)
             );
 
-            discord.sendEmbedMessageUsingPlayerAvatar(player, Color.red, msg.getString(), desc.getString());
+            // discord.sendEmbedMessageUsingPlayerAvatar(player, Color.red, msg.getString(), desc.getString());
+            discord.sendPlainMessage(msg.getString());
         });
 
         PlayerDeathCallback.EVENT.register(((playerEntity, source, deathMessage) -> {
